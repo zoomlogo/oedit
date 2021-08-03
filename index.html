@@ -7,7 +7,7 @@
                 background-color: #343434;
             }
             textarea {
-                font-family: monospace;
+                font-family: "DejaVu Sans Mono", monospace;
                 color: #dddddd;
                 background-color: #444444;
                 height: 100%;
@@ -27,7 +27,6 @@
                 var stdout = document.getElementById('ta');
                 stdout.select();
                 document.execCommand("copy");
-                stdout.deselect();
             }
         </script>
         <button onclick="copyToClipboard();">Copy</button>
