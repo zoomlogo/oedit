@@ -24,12 +24,13 @@
     <body>
         <script>
             function copyToClipboard() {
-                var stdout = document.getElementById('ta');
-                stdout.select();
+                var ta = document.getElementById('ta');
+                ta.select();
                 document.execCommand("copy");
             }
         </script>
         <button onclick="copyToClipboard();">Copy</button>
+        <button onclick="document.execCommand('paste');">Copy</button>
         <textarea id="ta"></textarea>
     </body>
 </html>
