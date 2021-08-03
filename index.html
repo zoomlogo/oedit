@@ -14,9 +14,23 @@
                 width: 100%;
                 border: none;
             }
+            button {
+                color: #dddddd;
+                background-color: #444444;
+                border: none;
+            }
         </style>
     </head>
     <body>
-        <textarea></textarea>
+        <script>
+            function copyToClipboard() {
+                var stdout = document.getElementById('ta');
+                stdout.select();
+                document.execCommand("copy");
+                stdout.deselect();
+            }
+        </script>
+        <button>Copy</button>
+        <textarea id="ta"></textarea>
     </body>
 </html>
