@@ -35,9 +35,13 @@
                 ta.select();
                 document.execCommand("copy");
             }
+            
+            function autoAdjust(obj) {
+                obj.style.height = obj.scrollHeight + 'px';
+            }
         </script>
         <button onclick="copyToClipboard();">Copy</button>
         <button onclick="document.getElementById('ta').value = '';">×</button>
-        <textarea id="ta"></textarea>
+        <textarea id="ta" oninput="autoAdjust(this);"></textarea>
     </body>
 </html>
