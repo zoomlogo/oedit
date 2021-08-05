@@ -26,15 +26,11 @@
         <script>
             function copyToClipboard() {
                 var ta = document.getElementById('ta');
-                await navigator.clipboard.writeText(ta.value);
-            }
-            function getClipboardText() {
-                var ta = document.getElementById('ta');
-                ta.value += navigator.clipboard.readText();
+                ta.select();
+                document.execCommand("copy");
             }
         </script>
         <button onclick="copyToClipboard();">Copy</button>
-        <button onclick="getClipboardText();">Paste</button>
         <textarea id="ta"></textarea>
     </body>
 </html>
