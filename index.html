@@ -22,7 +22,12 @@
                 border: none;
             }
             button {
-                color: #dddddd;
+                color: #eeeeee;
+                background-color: #444444;
+                border: none;
+            }
+            input {
+                color: #eeeeee;
                 background-color: #444444;
                 border: none;
             }
@@ -42,6 +47,8 @@
         </script>
         <button onclick="copyToClipboard();">Copy</button>
         <button onclick="ta = document.getElementById('ta'); ta.value= ''; ta.style.height = '100%'">×</button>
+        <input id="unin"></input>
+        <button>➦</button>
         <textarea id="ta" oninput="autoAdjust(this);"></textarea>
     </body>
 </html>
