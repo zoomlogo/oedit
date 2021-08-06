@@ -41,7 +41,7 @@
             }
         </script>
         <button onclick="copyToClipboard();">Copy</button>
-        <button onclick="document.getElementById('ta').value = '';">×</button>
+        <button onclick="ta = document.getElementById('ta'); ta.value= ''; ta.style.height = '100%'">×</button>
         <textarea id="ta" oninput="autoAdjust(this);"></textarea>
     </body>
 </html>
