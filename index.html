@@ -40,7 +40,16 @@
             function autoAdjust(obj) {
                 obj.style.height = obj.scrollHeight + 'px';
             }
+            
+            function addTA(obj) {
+                var ta = document.getElementById('ta');
+                ta.value += obj.innerText;
+            }
         </script>
+        <details>
+            <summary>Unicode Keyboard</summary>
+            In progress
+        </details><br>
         <button onclick="copyToClipboard();">Copy</button>
         <button onclick="ta = document.getElementById('ta'); ta.value= ''; ta.style.height = '100%'">×</button>
         <textarea id="ta" oninput="autoAdjust(this);"></textarea>
